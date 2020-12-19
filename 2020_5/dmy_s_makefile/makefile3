@@ -1,0 +1,10 @@
+
+ObjFiles=main.o add.o sub.o
+dmy_app:$(ObjFiles)
+	gcc -o dmy_app -I ./dmy_include main.o add.o sub.o
+main.o:main.c
+	gcc -c main.c -I ./dmy_include
+add.o:add.c
+	gcc -c add.c -I ./dmy_include
+sub.o:sub.c
+	gcc -c sub.c -I ./dmy_include
